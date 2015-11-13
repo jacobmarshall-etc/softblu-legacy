@@ -11,5 +11,5 @@
     "express-session": "^1.12.1",
     "mongoose": "^4.2.5"
   },
-  "license": "GPL-3.0"
+  "license": "MIT"
 }
