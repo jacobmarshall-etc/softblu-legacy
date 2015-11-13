@@ -5,7 +5,7 @@ var routes = ['users'];
 module.exports = function (router) {
     /**
      * @method GET
-     * @url /api/ping
+     * @path /api/ping
      */
     router.get('/ping', function (req, res) {
         res.status(200).type('text').send('01110000 01101111 01101110 01100111'); // pong
