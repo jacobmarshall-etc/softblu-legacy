@@ -1,12 +1,8 @@
 var express = require('express');
-var bugsnag = require('bugsnag');
 var namespace = require(softblu + 'util/namespace');
-var routes = ['api'];
+var routes = ['api', 'accounts'];
 
 module.exports = function (app) {
-    // Setup the bugsnag request handler to catch errors
-    app.use(bugsnag.requestHandler);
-
     // Register any static pages/resources stored in the 'static' folder
     app.use(express.static(softblu + '../static'));
 
@@ -15,6 +11,5 @@ module.exports = function (app) {
         namespace(app, '/' + name, require('./' + name));
     });
 
-    // Add the actual bugsnag error handler
-    app.use(bugsnag.errorHandler);
+    console.log('Registered %s top level routes (%s)', routes.length, routes.join(', '));
 };

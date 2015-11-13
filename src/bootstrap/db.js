@@ -23,3 +23,4 @@ function init () {
 
 module.exports = init;
 module.exports.ready = ready.promise;
+module.exports.connection = mongoose.connection;
