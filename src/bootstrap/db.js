@@ -5,8 +5,7 @@ var ready = deferred();
 var db;
 
 function init () {
-    mongoose.connect(config.databaseUrl);
-    db = mongoose.connection;
+    db = mongoose.createConnection(config.databaseUrl);
 
     db.on('error', function (err) {
         console.log('Failed to establish connection with database');
