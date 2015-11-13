@@ -1,5 +1,7 @@
 global.softblu = __dirname + '/';
 
+require(softblu + 'bootstrap/bugsnag')();
+
 var http = require(softblu + 'bootstrap/http');
 var db = require(softblu + 'bootstrap/db');
 
