@@ -3,7 +3,7 @@ var config = require(softblu + 'config');
 
 function init () {
     bugsnag.register(config.bugsnag.key, {
-        version: config.version,
+        appVersion: config.version,
         releaseStage: config.bugsnag.releaseStage,
         sendCode: true,
 
