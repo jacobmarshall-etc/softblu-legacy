@@ -1,4 +1,4 @@
-var middleware = ['errors', 'session'];
+var middleware = ['errors', 'session', 'flash'];
 
 var before = [];
 var after = [];
