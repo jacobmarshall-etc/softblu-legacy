@@ -11,8 +11,10 @@ function init () {
 
     app.listen(config.httpPort, function (err) {
         if (err) {
+            console.log('Failed to bind web server port');
             ready.reject(err);
         } else {
+            console.log('Web server listening for requests');
             ready.resolve(app);
         }
     });
