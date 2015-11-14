@@ -2,10 +2,10 @@ var mongoose = require('mongoose');
 var config = require(softblu + 'config');
 var deferred = require(softblu + 'util/deferred');
 var ready = deferred();
-var db;
+var db = mongoose.connection;
 
 function init () {
-    db = mongoose.createConnection(config.databaseUrl);
+    mongoose.connect(config.databaseUrl);
 
     db.on('error', function (err) {
         console.log('Failed to establish connection with database');
@@ -22,4 +22,4 @@ function init () {
 
 module.exports = init;
 module.exports.ready = ready.promise;
-module.exports.connection = mongoose.connection;
+module.exports.connection = db;
