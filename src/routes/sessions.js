@@ -42,12 +42,10 @@ module.exports = function (router) {
      * @method GET
      * @path /sessions/debug
      */
-    router.get('/debug',
-        function (req, res) {
-            res.type('json').send({
-                session: req.sessionID,
-                user: req.user && req.user._id
-            });
-        }
-    );
+    router.get('/debug', function (req, res) {
+        res.type('json').send({
+            session: req.sessionID,
+            user: req.user && req.user._id
+        });
+    });
 };

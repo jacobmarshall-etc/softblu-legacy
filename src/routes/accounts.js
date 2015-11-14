@@ -11,6 +11,7 @@ module.exports = function (router) {
      */
     router.get('/login',
         guard.unauthenticated(),
+
         function (req, res) {
             res.render('accounts/login', {
                 message: req.flash('error')
@@ -65,9 +66,7 @@ module.exports = function (router) {
      * @method GET
      * @path /accounts/logout
      */
-    router.get('/logout',
-        function (req, res) {
-            res.redirect('/sessions/destroy');
-        }
-    );
+    router.get('/logout', function (req, res) {
+        res.redirect('/sessions/destroy');
+    });
 };
