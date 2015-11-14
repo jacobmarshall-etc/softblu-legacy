@@ -1,7 +1,7 @@
 exports.version = require('../package.json').version;
 
-exports.httpPort = process.env.PORT;
-exports.databaseUrl = process.env.DB;
+exports.httpPort = process.env.PORT || 5000;
+exports.databaseUrl = process.env.DB || 'mongodb://localhost/softblu';
 exports.sessionSecret = process.env.SESSION_SECRET;
 
 exports.bugsnag = {
