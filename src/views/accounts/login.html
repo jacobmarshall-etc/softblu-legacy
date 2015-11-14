@@ -1,0 +1,16 @@
+<form method="POST" action="/sessions/create" enctype="application/x-www-form-urlencoded">
+    <div style="color: red">
+        {{ message }}
+    </div>
+    <fieldset>
+        <legend>Username</legend>
+        <input type="text" name="username">
+    </fieldset>
+    <fieldset>
+        <legend>Password</legend>
+        <input type="password" name="password">
+    </fieldset>
+    <button type="submit">
+        Login
+    </button>
+</form>

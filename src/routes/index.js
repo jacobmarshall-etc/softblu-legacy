@@ -1,6 +1,11 @@
 var express = require('express');
 var namespace = require(softblu + 'util/namespace');
-var routes = ['api', 'accounts'];
+
+var routes = [
+    'api',
+    'accounts',
+    'sessions'
+];
 
 module.exports = function (app) {
     // Register any static pages/resources stored in the 'static' folder

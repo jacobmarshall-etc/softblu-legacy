@@ -11,15 +11,15 @@ module.exports = function (router) {
      * @method GET
      * @path /api/users
      */
-    router.get('/', function (req, res) {
+    router.get('/', function (req, res, next) {
         User.find(function (err, users) {
             if (err) {
-                throw new Error('Could not fetch list of users');
+                next(new Error('Could not fetch list of users'));
+            } else {
+                res.send({
+                    result: users
+                });
             }
-
-            res.send({
-                result: users
-            });
         });
     });
 };

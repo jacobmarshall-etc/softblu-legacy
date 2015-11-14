@@ -1,4 +1,9 @@
-var middleware = ['errors', 'session', 'flash'];
+var middleware = [
+    'errors',
+    'session',
+    'flash',
+    'passport'
+];
 
 var before = [];
 var after = [];

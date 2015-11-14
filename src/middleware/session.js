@@ -5,6 +5,7 @@ var db = require(softblu + 'bootstrap/db');
 
 exports.before = function (app) {
     app.use(session({
+        name: 'session',
         secret: config.sessionSecret,
         store: new MongoStore({
             mongooseConnection: db.connection
